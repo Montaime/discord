@@ -1,0 +1,55 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+plugins {
+    id 'application'
+}
+
+ext.moduleName = 'discord-bot'
+archivesBaseName = moduleName
+
+dependencies {
+    implementation ('net.dv8tion:JDA:4.2.0_223')
+}
+
+java {
+    mainClassName = 'me.montai.discord.bot.Main'
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+task sourcesForRelease(type: Copy) {
+    from('src/main/java') {
+        include('**/Config.java')
+        filter(ReplaceTokens, tokens: [
+                token: getProjectProperty('discordToken')
+        ])
+    }
+    into('build/filteredSrc')
+    includeEmptyDirs = false
+}
+
+task generateJavaSources(type: SourceTask) {
+    def javaSources = sourceSets.main.allJava.filter {
+        it.name != 'Config.java'
+    }.asFileTree
+    source = javaSources + fileTree(sourcesForRelease.destinationDir)
+    dependsOn(sourcesForRelease)
+}
+
+task sourcesJar(type: Jar) {
+    archiveClassifier.set('sources')
+    from('src/main/java') {
+        exclude('**/Config.java')
+    }
+    from(sourcesForRelease.destinationDir)
+    dependsOn(sourcesForRelease)
+}
+
+compileJava {
+    source = generateJavaSources.source
+    dependsOn(generateJavaSources)
+}
+
+String getProjectProperty(String key) {
+    return project.properties.getOrDefault(key, "")
+}
