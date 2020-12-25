@@ -7,9 +7,16 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
+/**
+ * This CommandManager class represents a command issued by a user.
+ *
+ * todo:
+ *  - turn this class into a singleton
+ */
 public final class CommandManager extends ListenerAdapter {
 
-    private static final String PREFIX = "!sc";
+    /** The bot command prefix */
+    public static final String PREFIX = "!sc";
 
     private final List<Command> commands;
     private final Map<String, Integer> commandIndices;
@@ -23,6 +30,11 @@ public final class CommandManager extends ListenerAdapter {
 
     /* Getters & Setters */
 
+    /**
+     * Get the list of registered commands.
+     *
+     * @return The list of commands.
+     */
     @NotNull
     public List<Command> getCommands() {
         return commands;
@@ -30,8 +42,15 @@ public final class CommandManager extends ListenerAdapter {
 
     /* Methods */
 
+    /**
+     * Register a new command.
+     *
+     * @param command The command to be registered.
+     *
+     * @return The current instance of the CommandManager.
+     */
     @NotNull
-    public CommandManager addCommand(Command command) {
+    public CommandManager registerCommand(Command command) {
         final int index = commands.size();
 
         synchronized (commandIndices) {

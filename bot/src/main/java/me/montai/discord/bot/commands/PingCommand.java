@@ -5,6 +5,16 @@ import me.montai.discord.bot.core.CommandEvent;
 
 import java.time.temporal.ChronoUnit;
 
+/**
+ * [PingCommand]
+ *
+ * > !sc ping
+ *
+ * This command sends in the channel the current ping latency of the bot.
+ *
+ * todo:
+ *  - restrict command access
+ */
 public final class PingCommand extends Command {
 
     /* Constructors */

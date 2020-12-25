@@ -14,6 +14,12 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.security.auth.login.LoginException;
 
+/**
+ * This Main class has the entrypoint of the program.
+ * The Gradle task 'bot:run' will call the {@link Main#main(String[])} method with the command-line arguments.
+ *
+ * It is in this Main class that the JDA object is created and the bot is put online.
+ */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class Main {
 
@@ -37,8 +43,8 @@ public final class Main {
 
             jdaBuilder.addEventListeners(
                 new CommandManager()
-                    .addCommand(new HelpCommand())
-                    .addCommand(new PingCommand()),
+                    .registerCommand(new HelpCommand())
+                    .registerCommand(new PingCommand()),
                 new StatusListener()
             );
 

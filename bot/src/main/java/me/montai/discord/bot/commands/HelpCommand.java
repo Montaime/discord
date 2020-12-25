@@ -3,7 +3,17 @@ package me.montai.discord.bot.commands;
 import me.montai.discord.bot.core.Command;
 import me.montai.discord.bot.core.CommandEvent;
 
-public class HelpCommand extends Command {
+/**
+ * [HelpCommand]
+ *
+ * > !sc help
+ *
+ * This command sends in the channel the list of commands.
+ *
+ * todo:
+ *  - send the list of commands to the user DMs
+ */
+public final class HelpCommand extends Command {
 
     /* Constructors */
 

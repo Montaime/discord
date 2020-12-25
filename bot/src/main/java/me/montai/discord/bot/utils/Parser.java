@@ -9,13 +9,32 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * This Parser class contains parsing utils.
+ */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class Parser {
 
-    private static final Pattern COMMAND_PATTERN = Pattern.compile("[\\S&&[^\"]]+|\"(?:\\\\\"|[^\"])+\"");
+    /** The command argument Pattern object */
+    private static final Pattern ARGUMENT_PATTERN = Pattern.compile("[\\S&&[^\"]]+|\"(?:\\\\\"|[^\"])+\"");
 
     /* Methods */
 
+    /**
+     * Split a given String into arguments.
+     * Arguments are separated by whitespaces, but words enclosed in double quotes even separated by whitespaces will
+     * only produce one argument.
+     *
+     * examples:
+     * <code>
+     * Parser.split("word1 word2 word3") -> { "word1", "word2", "word3" }
+     * Parser.split("word1 \"word2 word3\"") -> { "word1", "word2 word3" }
+     * </code>
+     *
+     * @param s The String to split.
+     *
+     * @return A String array containing all the arguments of the given {@code s} String.
+     */
     @NotNull
     public static String[] split(final String s) {
         if (s == null || s.isEmpty()) {
@@ -23,7 +42,7 @@ public final class Parser {
         }
 
         final List<String> list = new LinkedList<>();
-        final Matcher m = COMMAND_PATTERN.matcher(s);
+        final Matcher m = ARGUMENT_PATTERN.matcher(s);
 
         while (m.find()) {
             final String arg = m.group(0);
