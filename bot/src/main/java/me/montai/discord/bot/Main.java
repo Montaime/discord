@@ -1,6 +1,7 @@
 package me.montai.discord.bot;
 
-import lombok.Getter;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import me.montai.discord.bot.commands.HelpCommand;
 import me.montai.discord.bot.commands.PingCommand;
 import me.montai.discord.bot.core.CommandManager;
@@ -9,13 +10,21 @@ import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
+import org.jetbrains.annotations.NotNull;
 
 import javax.security.auth.login.LoginException;
 
-@Getter
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class Main {
 
     private static JDA jda;
+
+    /* Getters & Setters */
+
+    @NotNull
+    public static JDA getJda() {
+        return jda;
+    }
 
     /* Methods */
 

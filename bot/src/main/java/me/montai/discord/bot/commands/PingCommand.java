@@ -7,10 +7,14 @@ import java.time.temporal.ChronoUnit;
 
 public final class PingCommand extends Command {
 
+    /* Constructors */
+
     public PingCommand() {
         this.keyword = "ping";
         this.description = "Gives the bot latency in milliseconds";
     }
+
+    /* Methods */
 
     @Override
     protected void execute(CommandEvent event) {

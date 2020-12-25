@@ -8,6 +8,8 @@ import org.jetbrains.annotations.NotNull;
 
 public final class StatusListener extends ListenerAdapter {
 
+    /* Methods */
+
     @Override
     public void onReady(@NotNull ReadyEvent event) {
         event.getJDA()

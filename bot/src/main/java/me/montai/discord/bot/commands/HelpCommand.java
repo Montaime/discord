@@ -5,11 +5,15 @@ import me.montai.discord.bot.core.CommandEvent;
 
 public class HelpCommand extends Command {
 
+    /* Constructors */
+
     public HelpCommand() {
         this.keyword = "help";
         this.aliases = new String[] { "h", "?" };
         this.description = "Sends the list of commands";
     }
+
+    /* Methods */
 
     @Override
     protected void execute(CommandEvent event) {
