@@ -1,17 +1,15 @@
 package me.montai.discord.bot.core;
 
+import me.montai.discord.bot.utils.Parser;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public final class CommandManager extends ListenerAdapter {
 
     private static final String PREFIX = "!sc";
-    private static final Pattern COMMAND_PATTERN = Pattern.compile("[\\S&&[^\"]]+|\"(?:\\\\\"|[^\"])+\"");
 
     private final List<Command> commands;
     private final Map<String, Integer> commandIndices;
@@ -77,7 +75,7 @@ public final class CommandManager extends ListenerAdapter {
             return;
         }
 
-        final String[] parts = parse(content);
+        final String[] parts = Parser.split(content);
         final String keyword = parts.length == 0 ? null : parts[0];
         final String[] args = Arrays.copyOfRange(parts, 1, parts.length);
 
@@ -96,24 +94,5 @@ public final class CommandManager extends ListenerAdapter {
 
             command.run(commandEvent);
         }
-    }
-
-    /* Internal */
-
-    @NotNull
-    private String[] parse(final String s) {
-        final List<String> list = new LinkedList<>();
-        final Matcher m = COMMAND_PATTERN.matcher(s);
-
-        while (m.find()) {
-            String arg = m.group(0);
-
-            if (arg.matches("\".*\"")) {
-                list.add(arg.substring(1, arg.length() - 1));
-            } else if (!arg.isEmpty() && !arg.matches("\\s+")) {
-                list.add(arg);
-            }
-        }
-        return list.toArray(new String[0]);
     }
 }
