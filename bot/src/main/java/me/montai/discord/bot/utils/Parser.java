@@ -18,6 +18,10 @@ public final class Parser {
 
     @NotNull
     public static String[] split(final String s) {
+        if (s == null || s.isEmpty()) {
+            return new String[0];
+        }
+
         final List<String> list = new LinkedList<>();
         final Matcher m = COMMAND_PATTERN.matcher(s);
 
