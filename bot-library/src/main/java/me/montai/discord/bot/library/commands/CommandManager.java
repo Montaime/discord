@@ -1,6 +1,6 @@
-package me.montai.discord.bot.core;
+package me.montai.discord.bot.library.commands;
 
-import me.montai.discord.bot.utils.Parser;
+import me.montai.discord.bot.library.utils.Parser;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;

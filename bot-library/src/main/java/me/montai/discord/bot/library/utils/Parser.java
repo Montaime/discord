@@ -1,4 +1,4 @@
-package me.montai.discord.bot.utils;
+package me.montai.discord.bot.library.utils;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;

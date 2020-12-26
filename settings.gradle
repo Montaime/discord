@@ -1,3 +1,4 @@
 rootProject.name = 'discord'
 
 include ('bot')
+include ('bot-library')

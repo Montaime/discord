@@ -4,7 +4,7 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import me.montai.discord.bot.commands.HelpCommand;
 import me.montai.discord.bot.commands.PingCommand;
-import me.montai.discord.bot.core.CommandManager;
+import me.montai.discord.bot.library.commands.CommandManager;
 import me.montai.discord.bot.listeners.StatusListener;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
