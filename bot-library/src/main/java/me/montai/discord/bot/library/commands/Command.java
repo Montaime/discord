@@ -1,4 +1,4 @@
-package me.montai.discord.bot.core;
+package me.montai.discord.bot.library.commands;
 
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import org.jetbrains.annotations.NotNull;

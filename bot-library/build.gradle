@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library'
+}
+
+ext.moduleName = 'discord-bot-library'
+archivesBaseName = moduleName
+
+dependencies {
+    api ('net.dv8tion:JDA:4.2.0_223')
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}

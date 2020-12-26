@@ -1,4 +1,4 @@
-import me.montai.discord.bot.utils.Parser;
+import me.montai.discord.bot.library.utils.Parser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

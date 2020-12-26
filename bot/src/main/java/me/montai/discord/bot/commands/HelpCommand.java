@@ -1,7 +1,7 @@
 package me.montai.discord.bot.commands;
 
-import me.montai.discord.bot.core.Command;
-import me.montai.discord.bot.core.CommandEvent;
+import me.montai.discord.bot.library.commands.Command;
+import me.montai.discord.bot.library.commands.CommandEvent;
 
 /**
  * [HelpCommand]
