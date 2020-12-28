@@ -59,7 +59,7 @@ discordToken=replace_this_with_your_bot_token
 sh gradlew clean bot:run
 ```
 
-
+<br>
 
 ## Contributing
 
@@ -68,7 +68,7 @@ Pull Requests into the `main` branch will be rejected.
 
 You can find the full [contributing guidelines](https://github.com/Montaime/discord/blob/main/.github/CONTRIBUTING.md).
 
-
+<br>
 
 ## License
 
