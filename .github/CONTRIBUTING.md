@@ -16,7 +16,7 @@ Depending on your changes there are certain rules you have to follow in order fo
 1. Development
 
    - Keep your code consistent
-     - Make sure your code follows the project [Coding Style]()
+     - Make sure your code follows the project [Coding Style](https://github.com/Montaime/discord/wiki/Coding-Style)
      - Make sure there are no code duplication
    - Avoid adding unnecessary dependencies
    - Self-review your code regularly
