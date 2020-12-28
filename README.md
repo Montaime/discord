@@ -11,8 +11,8 @@
   <a href="https://soundcloud.com/montaime"><img alt="soundcloud" src="https://img.shields.io/badge/SoundCloud-Montaime-FF6600?logo=soundcloud&logoColor=white&style=flat-square"/></a>
   <a href="https://open.spotify.com/user/56bxplytbqnkkuzfagb24gbch?si=jSdXN2doSTaMqc6aUIThbA"><img alt="spotify" src="https://img.shields.io/badge/Spotify-Montaime-1DB954?logo=spotify&logoColor=white&style=flat-square"/></a>
   <br>
-  <a href="https://github.com/Montaime/discord/blob/main/LICENSE"><img alt="license" src="https://img.shields.io/github/license/Montaime/discord?color=lightgray&label=License&logo=apache&logoColor=white&style=flat-square"/></a>
-  <a href="https://github.com/Montaime/discord/actions?query=event%3Apush+branch%3Amain+workflow%3A%22Java+CI+with+Gradle%22"><img alt="ci" src="https://img.shields.io/github/workflow/status/Montaime/discord/gradle?event=push&label=CI&logo=github&logoColor=white&style=flat-square"/></a>
+  <a href="https://github.com/Montaime/discord/actions?query=event%3Apush+branch%3Amain+workflow%3A%22Java+CI+with+Gradle%22"><img alt="ci" src="https://img.shields.io/github/workflow/status/Montaime/discord/Java%20CI%20with%20Gradle?event=push&label=CI&logo=github&logoColor=white&style=flat-square"/></a>
+  <a href="https://github.com/Montaime/discord/blob/main/LICENSE"><img alt="license" src="https://img.shields.io/github/license/Montaime/discord?color=lightgray&label=License&logo=apache&style=flat-square"/></a>
 </p>
 
 <br>
