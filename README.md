@@ -63,8 +63,7 @@ sh gradlew clean bot:run
 
 ## Contributing
 
-If you want to help with the development of the project you are more than welcome to do so. When contributing, make sure to base your branch off of the `development` branch and create your Pull Request into that same branch
-Pull Requests into the `main` branch will be rejected.
+If you want to help with the development of the project you are more than welcome to do so. When contributing, make sure to base your branch off of the `development` branch and create your Pull Request into that same branch. Pull Requests into the `main` branch will be rejected.
 
 You can find the full [contributing guidelines](https://github.com/Montaime/discord/blob/main/.github/CONTRIBUTING.md).
 
