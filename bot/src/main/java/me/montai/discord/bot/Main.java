@@ -20,6 +20,7 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import me.montai.discord.bot.commands.HelpCommand;
 import me.montai.discord.bot.commands.PingCommand;
+import me.montai.discord.bot.commands.ScreamCommand;
 import me.montai.discord.bot.library.commands.CommandManager;
 import me.montai.discord.bot.listeners.StatusListener;
 import net.dv8tion.jda.api.JDA;
@@ -60,7 +61,8 @@ public final class Main {
             jdaBuilder.addEventListeners(
                 new CommandManager()
                     .registerCommand(new HelpCommand())
-                    .registerCommand(new PingCommand()),
+                    .registerCommand(new PingCommand())
+                    .registerCommand(new ScreamCommand()),
                 new StatusListener()
             );
 
