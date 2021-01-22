@@ -31,21 +31,21 @@ import java.util.regex.Pattern;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class Parser {
 
-    /** The command argument Pattern object */
+    /** The command argument Pattern object. */
     private static final Pattern ARGUMENT_PATTERN = Pattern.compile("[\\S&&[^\"]]+|\"(?:\\\\\"|[^\"])+\"");
 
     /* Methods */
 
     /**
      * Split a given String into arguments.
-     * Arguments are separated by whitespaces, but words enclosed in double quotes even separated by whitespaces will
+     * <p>Arguments are separated by whitespaces, but words enclosed in double quotes even separated by whitespaces will
      * only produce one argument.
-     *
-     * examples:
-     * <code>
+     * <p>
+     * <p>Examples:
+     * <pre>
      * Parser.split("word1 word2 word3") -> { "word1", "word2", "word3" }
      * Parser.split("word1 \"word2 word3\"") -> { "word1", "word2 word3" }
-     * </code>
+     * </pre>
      *
      * @param s The String to split.
      *

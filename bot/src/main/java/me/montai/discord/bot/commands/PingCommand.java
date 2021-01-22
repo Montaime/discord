@@ -23,11 +23,14 @@ import java.time.temporal.ChronoUnit;
 
 /**
  * [PingCommand]
- *
- * > !sc ping
- *
- * This command sends in the channel the current ping latency of the bot.
- *
+ * <p>This command sends to the channel the current ping latency of the bot.
+ * <p>
+ * <p>Usage:
+ * <pre>
+ * !mt ping
+ * </pre>
+ */
+/*
  * todo:
  *  - restrict command access
  */
@@ -37,7 +40,7 @@ public final class PingCommand extends Command {
 
     public PingCommand() {
         this.keyword = "ping";
-        this.description = "Gives the bot latency in milliseconds";
+        this.description = "Gives the bot latency in milliseconds.";
     }
 
     /* Methods */

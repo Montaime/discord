@@ -22,6 +22,8 @@ import net.dv8tion.jda.api.events.ReadyEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
+import static me.montai.discord.bot.library.commands.CommandManager.PREFIX;
+
 /**
  * This StatusListener class contains methods listening to the bot status.
  */
@@ -35,7 +37,7 @@ public final class StatusListener extends ListenerAdapter {
             .getPresence()
             .setPresence(
                 OnlineStatus.ONLINE,
-                Activity.listening("!sc help")
+                Activity.listening(PREFIX + " help")
             );
     }
 }

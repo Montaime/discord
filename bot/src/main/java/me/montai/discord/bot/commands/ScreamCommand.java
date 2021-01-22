@@ -19,13 +19,26 @@ package me.montai.discord.bot.commands;
 import me.montai.discord.bot.library.commands.Command;
 import me.montai.discord.bot.library.commands.CommandEvent;
 
-public final class ScreamCommand extends Command{
+/**
+ * [ScreamCommand]
+ * <p>This command sends to the channel a screaming message.
+ * <p>
+ * <p>Usage:
+ * <pre>
+ * !mt scream
+ * </pre>
+ */
+public final class ScreamCommand extends Command {
+
+    /* Constructors */
 
     public ScreamCommand() {
         this.keyword = "scream";
         this.aliases = new String[]{"aaa"};
         this.description = "Literally screams at you.";
     }
+
+    /* Methods */
 
     @Override
     protected void execute(CommandEvent event) {
