@@ -4,7 +4,7 @@
   <br>
 </h1>
 
-<h4 align="center">Source code of the Montaime Discord music bot</h4>
+<h4 align="center">Source code of the Montaime Discord bot</h4>
 
 <p align="center">
   <a href="https://montai.me/"><img alt="website" src="https://img.shields.io/badge/Website-montai.me-black?logo=safari&logoColor=white&style=flat-square"/></a>
