@@ -25,13 +25,13 @@ import java.util.*;
 
 /**
  * This CommandManager class represents a command issued by a user.
- *
- * todo:
+ */
+/* todo:
  *  - turn this class into a singleton
  */
 public final class CommandManager extends ListenerAdapter {
 
-    /** The bot command prefix */
+    /** The bot command prefix. */
     public static final String PREFIX = "!sc";
 
     private final List<Command> commands;

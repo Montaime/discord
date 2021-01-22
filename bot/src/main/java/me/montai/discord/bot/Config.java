@@ -25,6 +25,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class Config {
 
-    /** The Discord bot token from the gradle.properties file */
+    /** The Discord bot token from the gradle.properties file. */
     public static final String TOKEN = "@token@";
 }

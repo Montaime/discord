@@ -21,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * This Command class represents a bot command.
- * Bot commands need to extend this class in order to be registered.
+ * <p>Bot commands need to extend this class in order to be registered.
  */
 public abstract class Command {
 
@@ -80,7 +80,7 @@ public abstract class Command {
     /**
      * This methods serves as intermediate between the {@link CommandManager#onMessageReceived(MessageReceivedEvent)}
      * and the {@link Command#execute(CommandEvent)} methods.
-     * This method calls the {@link Command#execute(CommandEvent)} one in a try-catch block in order to prevent the bot
+     * <p>This method calls the {@link Command#execute(CommandEvent)} one in a try-catch block in order to prevent the bot
      * from crashing due to an exception thrown by the logic inside the {@link Command#execute(CommandEvent)} method.
      *
      * @param event The CommandEvent to pass to the Command#execute method.

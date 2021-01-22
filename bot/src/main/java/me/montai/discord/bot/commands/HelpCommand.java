@@ -21,11 +21,14 @@ import me.montai.discord.bot.library.commands.CommandEvent;
 
 /**
  * [HelpCommand]
- *
- * > !sc help
- *
- * This command sends in the channel the list of commands.
- *
+ * <p>This command sends to the channel the list of commands.
+ * <p>
+ * <p>Usage:
+ * <pre>
+ * !mt help
+ * </pre>
+ */
+/*
  * todo:
  *  - send the list of commands to the user DMs
  */
@@ -36,7 +39,7 @@ public final class HelpCommand extends Command {
     public HelpCommand() {
         this.keyword = "help";
         this.aliases = new String[] { "h", "?" };
-        this.description = "Sends the list of commands";
+        this.description = "Sends the list of commands.";
     }
 
     /* Methods */
