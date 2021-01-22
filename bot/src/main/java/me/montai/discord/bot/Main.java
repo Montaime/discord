@@ -18,16 +18,18 @@ package me.montai.discord.bot;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
-import me.montai.discord.bot.commands.HelpCommand;
-import me.montai.discord.bot.commands.PingCommand;
-import me.montai.discord.bot.commands.ScreamCommand;
+import me.montai.discord.bot.commands.*;
 import me.montai.discord.bot.library.commands.CommandManager;
 import me.montai.discord.bot.listeners.StatusListener;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.requests.GatewayIntent;
+import net.dv8tion.jda.api.utils.ChunkingFilter;
+import net.dv8tion.jda.api.utils.MemberCachePolicy;
 import org.jetbrains.annotations.NotNull;
+import org.w3c.dom.Text;
 
 import javax.security.auth.login.LoginException;
 
@@ -54,15 +56,19 @@ public final class Main {
     public static void main(String[] args) {
         try {
             final JDABuilder jdaBuilder = JDABuilder.createDefault(Config.TOKEN)
-                .setAutoReconnect(true)
-                .setStatus(OnlineStatus.DO_NOT_DISTURB)
-                .setActivity(Activity.playing("starting up..."));
+                    .setAutoReconnect(true)
+                    .enableIntents(GatewayIntent.GUILD_MEMBERS)
+                    //.setChunkingFilter(ChunkingFilter.ALL)
+                    .setStatus(OnlineStatus.DO_NOT_DISTURB)
+                    .setActivity(Activity.playing("starting up..."));
 
             jdaBuilder.addEventListeners(
                 new CommandManager()
                     .registerCommand(new HelpCommand())
                     .registerCommand(new PingCommand())
-                    .registerCommand(new ScreamCommand()),
+                    .registerCommand(new ScreamCommand())
+                    .registerCommand(new TextToRegEmojiCommand())
+                    .registerCommand(new TempConvCommand()),
                 new StatusListener()
             );
 

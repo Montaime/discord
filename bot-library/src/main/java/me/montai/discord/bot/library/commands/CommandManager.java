@@ -32,7 +32,7 @@ import java.util.*;
 public final class CommandManager extends ListenerAdapter {
 
     /** The bot command prefix */
-    public static final String PREFIX = "!sc";
+    public static final String PREFIX = "!mt";
 
     private final List<Command> commands;
     private final Map<String, Integer> commandIndices;

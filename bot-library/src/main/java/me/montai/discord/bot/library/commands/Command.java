@@ -89,6 +89,9 @@ public abstract class Command {
         try {
             execute(event);
         } catch(Throwable t) {
+            event.reply(String.format("%s",
+                    t.getMessage()
+            ));
             throw t instanceof RuntimeException ? (RuntimeException) t : new RuntimeException(t);
         }
     }
